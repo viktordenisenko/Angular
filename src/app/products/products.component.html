@@ -1,0 +1,15 @@
+<h1>Best offers</h1>
+<div class="products-section">
+    <div class = "product" *ngFor=" let p of products">
+        <img [src] = "p.photo"/>
+        <h3>{{ p.name }}</h3>
+        <h2>
+            <span [class.deleted] ="p.sale">{{ p. price }}&euro;</span>
+            <span *ngIf = "p.sale">{{ p. sale }}&euro;</span>
+
+        </h2>
+        <button>Add to cart</button>
+         
+    </div> 
+
+</div>
